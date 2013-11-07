@@ -32,6 +32,7 @@ body {
 	font-size: 20px;
 	margin: 0;
 	padding: 0;
+	background-color: #363636;
 }
 
 .warning {
@@ -54,6 +55,17 @@ body {
 	padding: 0 10px;
 }
 
+a,
+a:hover,
+a:visited {
+	text-decoration: none;
+	color: #bed62f;
+}
+
+a:hover {
+	color: #D7F137;
+}
+
 .app-name {
 	font-size: 2em;
 	font-weight: bold;
@@ -69,7 +81,8 @@ body {
 	float: right;
 }
 
-.clocks {
+.clocks,
+.maps {
 	background: url('../img/Map_BG.png') no-repeat center center fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;

@@ -13,9 +13,11 @@
 	</head>
 	<body id="clocks">
 		<section class="header">
-			<img src="img/TelerikLogo.png" />
-			<span class="selected-day" data-bind="text: selectedDay"></span>
-			<span class="app-name">TELEZONER</span>
+			<a href="index.html">
+				<img src="img/TelerikLogo.png" />
+				<span class="selected-day" data-bind="text: selectedDay"></span>
+				<span class="app-name">TELEZONER</span>
+			</a>
 		</section>
 
 		<section class="clocks"><div class="clearfix" data-role="listview" data-bind="source: offices" data-template="clock-template"></div></section>
@@ -26,7 +28,7 @@
 		<script id="clock-template" type="text/x-kendo-template">
 			<div class="clock">
 				<div class="office-icons">
-					<i class="fa fa-map-marker"></i>
+					<a href="mapPage.html"><i class="fa fa-map-marker"></i></a>
 					<span class="warning">!</span>
 				</div>
 				<span class="office-name" data-bind="text: name"></span>
@@ -41,6 +43,7 @@
         <script src="js/moment-with-langs.min.js"></script>
         <script src="js/moment-timezone.min.js"></script>
         <script src="js/moment-timezone-data.js"></script>
+        <script src="js/raphael-min.js"></script>
         <script src="js/clocks.js"></script>
 	</body>
 </html>

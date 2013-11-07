@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Telerik Offices</title>
+
+        <link href="http://cdn.kendostatic.com/2013.2.918/styles/kendo.common.min.css" rel="stylesheet" />
+        <link href="http://cdn.kendostatic.com/2013.2.918/styles/kendo.default.min.css" rel="stylesheet" />
+        <link href="http://cdn.kendostatic.com/2013.2.918/styles/kendo.dataviz.min.css" rel="stylesheet" />
+        <link href="http://cdn.kendostatic.com/2013.2.918/styles/kendo.dataviz.default.min.css" rel="stylesheet" />
+        <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCG4jUolof0jhqQu0j1aNqSWfW_ms-wRKg&sensor=true"></script>
+        <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+		<link href="css/style.css" rel="stylesheet" />
+		
+		<style>
+      html, body, #map-canvas {
+        height: 100%;
+        margin: 0px;
+        padding: 0px
+      }
+    </style>
+	<style type="text/css">
+	/* pushes the page to the full capacity of the viewing area */
+	html {height:100%;}
+	body {height:100%; overflow:hidden;}
+	/* prepares the background image to full capacity of the viewing area */
+	#bg {position:fixed; top:0; left:0; width:100%; height:100%;}
+	/* places the content ontop of the background image */
+	#content {position:relative; z-index:1;}
+	#map-canvas {position:relative; z-index:1;}
+	#formWindow {position:relative; z-index:2;}
+
+	#topBar{
+		position:fixed;
+		top:0;
+		left:0;
+		width:100%;
+		height:60px;
+		background-color:#363636;
+	}
+	.RadWindow_Default
+    {
+        position: fixed,
+		top:50px,
+		left:50px
+    }
+	</style>
+	</head>
+	
+	<body class="maps">
+
+	<section class="header">
+		<a href="index.html">
+			<img src="img/TelerikLogo.png" />
+			<span class="app-name">TELEZONER</span>
+		</a>
+	</section>
+
+	<div id="content">
+		<button id="bostonButton">Boston</button>
+		<button id="austinButton">Austin</button>
+		<button id="hudsonButton">Hudson</button>
+		<button id="bulgariaButton">Bulgaria</button>
+		<button id="copenhagenButton">Copenhagen</button>
+		<button id="sydneyButton">Sydney</button>
+		<button id="paloAltoButton">Palo Alto</button>
+	</div>
+	<div id="formWindow" style="width:100%;height:40%;margin-left:auto;margin-right:auto;">
+			<p>Enter a description:</p>
+			<input type="text" name="pinName"/>
+			<button id="addPinButton">Add</button>
+		</div>
+	<div id="map-canvas" style="width:65%;height:65%;margin-left:auto;
+		margin-right:auto;border:5px solid;border-radius:5px;border-color:#BED62F">Google Map</div>
+		
+	
+		
+		
+		<script>
+		//global js variables
+		var map;  //google.maps.Map
+		var marker;  //google.maps.Marker
+		var dropPin;  //google.maps.LatLng
+		var infowindow;
+		
+		//code runs on page init
+		function initialize() {
+			var myLatlng = new google.maps.LatLng(42.374805, -71.272988);
+			
+			infowindow = new google.maps.InfoWindow();
+			
+			//init map options
+			var mapOptions = {
+				zoom: 14,
+				center: myLatlng,
+				mapTypeId: google.maps.MapTypeId.ROADMAP,
+			}
+		
+			//create temp marker, with title "Hello World!"
+			marker = new google.maps.Marker({
+				position: myLatlng,
+				title:"Hello World!"
+			});
+			
+			//create map with map div & map options
+			map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+			  
+			//event handler to add markers where mouse is clicked  
+			google.maps.event.addListener(map, 'click', function(event) {
+			/*var window = $("#formWindow");
+				window.data("kendoWindow").open();*/
+				mapZoom = map.getZoom();
+				dropPin = event.latLng;
+				setTimeout("placeMarker()", 500);
+			});
+			
+			$("#formWindow").kendoWindow({
+				position: {top:100}
+			});
+			var window = $("#formWindow").data("kendoWindow").close();
+			//window.close();
+		}
+		
+		function placeMarker() {
+			var window = $("#formWindow").data("kendoWindow");
+			
+			window.toFront();
+			window.open();
+		}
+		
+		$("#addPinButton").click(function(){
+			if(mapZoom == map.getZoom()){
+			var pinTitle = $("#pinName").value;
+					var image = new google.maps.MarkerImage('teleriklogo.png',
+						new google.maps.Size(50,50),
+						new google.maps.Point(0,0),
+						new google.maps.Point(16,25)
+					);
+			
+				marker = new google.maps.Marker({
+					position: dropPin,
+					map: map,
+					icon: image,
+					title: pinTitle
+				});
+				
+				
+				google.maps.event.addListener(marker, 'click', function(event) {
+					infowindow.setContent(pinTitle); //this variabe changes, so this doesnt work
+					infowindow.open(map,marker);
+				});
+				//createMarker(dropPin, pinTitle);
+				
+			}	
+			
+			var window = $("#formWindow").data("kendoWindow");
+			window.close();
+			
+			});
+		
+		
+		//this was my attempt at creating markers with a text label. it does not work.
+		/*
+		function createMarker(position, label) {
+		   return new google.maps.MarkerWithLabel({
+		   position: position,
+		   draggable: false,
+		   map: map,
+		   labelText: label,
+		   labelVisible: true
+		   });
+		 }*/
+		
+
+		google.maps.event.addDomListener(window, 'load', initialize);
+
+		$(document).ready(function () {
+			$("#bulgariaButton").click(function(){
+					zoomBulgaria();
+			});
+			$("#bostonButton").click(function(){
+					zoomBoston();
+			});
+			$("#hudsonButton").click(function(){
+					zoomHudson();
+			});
+			$("#austinButton").click(function(){
+					zoomAustin();
+			});
+			$("#copenhagenButton").click(function(){
+					zoomCopenhagen();
+			});
+			$("#sydneyButton").click(function(){
+					zoomSydney();
+			});
+			$("#paloAltoButton").click(function(){
+					zoomPaloAlto();
+			});
+		});
+		
+		function zoomBoston(){
+			map.setCenter(new google.maps.LatLng(42.374805, -71.272988), 13);
+		}
+		function zoomAustin(){
+			map.setCenter(new google.maps.LatLng(30.268107, -97.744821), 13);
+		}
+		function zoomHudson(){
+			map.setCenter(new google.maps.LatLng(41.227979, -81.439556), 13);
+		}
+		function zoomBulgaria(){
+			map.setCenter(new google.maps.LatLng(42.697839, 23.32167), 13);
+		}
+		function zoomCopenhagen(){
+			map.setCenter(new google.maps.LatLng(55.670181, 12.53854), 13);
+		}
+		function zoomSydney(){
+			map.setCenter(new google.maps.LatLng(-33.919289, 151.251876), 13);
+		}
+		function zoomPaloAlto(){
+			map.setCenter(new google.maps.LatLng(37.444618, -122.163263), 13);
+		}
+
+		
+    </script>
+        <script src="http://cdn.kendostatic.com/2013.2.918/js/kendo.all.min.js"></script>
+        <script src="http://cdn.kendostatic.com/2013.2.918/js/kendo.timezones.min.js"></script>
+	</body>
+</html>
