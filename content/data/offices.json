@@ -1,38 +1,70 @@
 {
-    "offices": {
-        "USA/Houston": [
-            "-6 US C%sT"
-        ],
-        "USA/Austin": [
-            "-6 US C%sT"
-        ],
-        "USA/Palo_Alto": [
-            "-8 US P%sT"
-        ],
-        "USA/Boston": [
-            "-5 US E%sT"
-        ],
-        "USA/Hudson": [
-            "-5 US E%sT"
-        ],
-        "Australia/Sydney": [
-            "10 AN EST"
-        ],
-        "Denmark/Copenhagen": [
-            "1 EU CE%sT"
-        ],
-        "Germany/Munich": [
-            "1 EU CE%sT"
-        ],
-        "UK/London": [
-            "0 EU GMT/BST"
-        ],
-        "Bulgaria/Sofia": [
-            "2 EU EE%sT"
-        ],
-        "India/Gurgaon": [
-            ""
-        ]
+  "offices": [
+    {
+      "name": "USA/Houston",
+      "timezone": "-6 US C%sT",
+      "lat": 29.9322245,
+      "long": -95.295896
+    },
+    {
+      "name": "USA/Austin",
+      "timezone": "-6 US C%sT",
+      "lat": 30.268107,
+      "long": -97.744821
+    },
+    {
+      "name": "USA/Palo_Alto",
+      "timezone": "-8 US P%sT",
+      "lat": 37.444618,
+      "long": -122.163263
+    },
+    {
+      "name": "USA/Boston",
+      "timezone": "-5 US E%sT",
+      "lat": 42.374805,
+      "long": -71.272988
+    },
+    {
+      "name": "USA/Hudson",
+      "timezone": "-5 US E%sT",
+      "lat": 41.227979,
+      "long": -81.439556
+    },
+    {
+      "name": "Australia/Sydney",
+      "timezone": "10 AN EST",
+      "lat": -33.919289,
+      "long": 151.251876
+    },
+    {
+      "name": "Denmark/Copenhagen",
+      "timezone": "1 EU CE%sT",
+      "lat": 55.670181,
+      "long": 12.53854
+    },
+    {
+      "name": "Germany/Munich",
+      "timezone": "1 EU CE%sT",
+      "lat": 48.117496,
+      "long": 11.601371
+    },
+    {
+      "name": "UK/London",
+      "timezone": "0 EU GMT/BST",
+      "lat": 51.519,
+      "long": -0.130222
+    },
+    {
+      "name": "Bulgaria/Sofia",
+      "timezone": "2 EU EE%sT",
+      "lat": 42.697839,
+      "long": 23.32167
+    },
+    {
+      "name": "India/Gurgaon",
+      "timezone": "",
+      "lat": 28.490348,
+      "long": 77.092689
     }
+  ]
 }
-
