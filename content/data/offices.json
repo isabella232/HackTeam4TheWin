@@ -1,62 +1,61 @@
-{
-  "offices": [
+[
     {
       "name": "USA/Houston",
-      "timezone": "-6 US C%sT",
+      "timezone": "America/Monterrey",
       "lat": 29.9322245,
       "long": -95.295896
     },
     {
       "name": "USA/Austin",
-      "timezone": "-6 US C%sT",
+      "timezone": "America/New_York",
       "lat": 30.268107,
       "long": -97.744821
     },
     {
       "name": "USA/Palo_Alto",
-      "timezone": "-8 US P%sT",
+      "timezone": "America/Los_Angeles",
       "lat": 37.444618,
       "long": -122.163263
     },
     {
       "name": "USA/Boston",
-      "timezone": "-5 US E%sT",
+      "timezone": "America/New_York",
       "lat": 42.374805,
       "long": -71.272988
     },
     {
       "name": "USA/Hudson",
-      "timezone": "-5 US E%sT",
+      "timezone": "America/New_York",
       "lat": 41.227979,
       "long": -81.439556
     },
     {
       "name": "Australia/Sydney",
-      "timezone": "10 AN EST",
+      "timezone": "Australia/Sydney",
       "lat": -33.919289,
       "long": 151.251876
     },
     {
       "name": "Denmark/Copenhagen",
-      "timezone": "1 EU CE%sT",
+      "timezone": "Europe/Copenhagen",
       "lat": 55.670181,
       "long": 12.53854
     },
     {
       "name": "Germany/Munich",
-      "timezone": "1 EU CE%sT",
+      "timezone": "Europe/Berlin",
       "lat": 48.117496,
       "long": 11.601371
     },
     {
       "name": "UK/London",
-      "timezone": "0 EU GMT/BST",
+      "timezone": "Europe/London",
       "lat": 51.519,
       "long": -0.130222
     },
     {
       "name": "Bulgaria/Sofia",
-      "timezone": "2 EU EE%sT",
+      "timezone": "Europe/Sofia",
       "lat": 42.697839,
       "long": 23.32167
     },
@@ -66,5 +65,4 @@
       "lat": 28.490348,
       "long": 77.092689
     }
-  ]
-}
+]
