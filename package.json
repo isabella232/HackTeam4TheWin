@@ -1,0 +1,25 @@
+{
+  "name": "HackTeam4TheWin",
+  "version": "0.0.0",
+  "description": "Hackathon Team 4",
+  "main": "web.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/telerik/HackTeam4TheWin.git"
+  },
+  "author": "Telerik",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/telerik/HackTeam4TheWin/issues"
+  },
+  "dependencies": {
+    "express": "~3.4.4"
+  },
+  "engines": {
+    "node": "0.10.x",
+    "npm": "1.2.x"
+  }
+}
