@@ -1,0 +1,10 @@
+* {
+	-mox-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+section {
+	border: 1px solid black;
+	min-height: 64px;
+}
