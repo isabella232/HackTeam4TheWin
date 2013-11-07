@@ -8,23 +8,29 @@
         <link href="http://cdn.kendostatic.com/2013.2.918/styles/kendo.default.min.css" rel="stylesheet" />
         <link href="http://cdn.kendostatic.com/2013.2.918/styles/kendo.dataviz.min.css" rel="stylesheet" />
         <link href="http://cdn.kendostatic.com/2013.2.918/styles/kendo.dataviz.default.min.css" rel="stylesheet" />
+        <link href="css/font-awesome.min.css" rel="stylesheet" />
         <link href="css/style.css" rel="stylesheet" />
 	</head>
 	<body id="clocks">
-		<section class="header"><span data-bind="text: selectedTime"></span></section>
+		<section class="header">
+			<img src="img/TelerikLogo.png" />
+			<span class="selected-day" data-bind="text: selectedDay"></span>
+			<span class="app-name">TELEZONER</span>
+		</section>
 
-		<section class="notifications">(notifications)</section>
+		<section class="clocks"><div class="clearfix" data-role="listview" data-bind="source: offices" data-template="clock-template"></div></section>
 
-		<section class="clocks"><div data-role="listview" data-bind="source: offices" data-template="clock-template"></div></section>
-
-		<section class="timeline">(timeline chart)</section>
+		<section class="notifications"></section>
 
 		<!-- kendo templates -->
 		<script id="clock-template" type="text/x-kendo-template">
-			<div>
-				<i class="fa fa-fw"></i>
-				<span data-bind="text: name"></span>
-				<span data-bind="text: calcTime"></span>
+			<div class="clock">
+				<div class="office-icons">
+					<i class="fa fa-map-marker"></i>
+					<span class="warning">!</span>
+				</div>
+				<span class="office-name" data-bind="text: name"></span>
+				<span class="office-time" data-bind="text: calcTime"></span>
 			</div>
 		</script>
 

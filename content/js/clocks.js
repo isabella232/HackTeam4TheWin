@@ -39,10 +39,14 @@
 		selectedTime: moment().toDate(),
 		offices: officeData,
 
+		selectedDay: function () {
+			return kendo.toString(this.get("selectedTime"), "D");
+		},
+
 		calcTime: function (data) {
 			var timezone = data.get("timezone");
 			if(timezone) {
-				return moment(this.get("selectedTime")).tz(timezone).format("H:mm a z");
+				return moment(this.get("selectedTime")).tz(timezone).format("h:mm a z");
 			}
 			return "";
 		}
