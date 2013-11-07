@@ -1,0 +1,38 @@
+{
+    "offices": {
+        "USA/Houston": [
+            "-6 US C%sT"
+        ],
+        "USA/Austin": [
+            "-6 US C%sT"
+        ],
+        "USA/Palo_Alto": [
+            "-8 US P%sT"
+        ],
+        "USA/Boston": [
+            "-5 US E%sT"
+        ],
+        "USA/Hudson": [
+            "-5 US E%sT"
+        ],
+        "Australia/Sydney": [
+            "10 AN EST"
+        ],
+        "Denmark/Copenhagen": [
+            "1 EU CE%sT"
+        ],
+        "Germany/Munich": [
+            "1 EU CE%sT"
+        ],
+        "UK/London": [
+            "0 EU GMT/BST"
+        ],
+        "Bulgaria/Sofia": [
+            "2 EU EE%sT"
+        ],
+        "India/Gurgaon": [
+            ""
+        ]
+    }
+}
+
