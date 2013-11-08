@@ -51,7 +51,7 @@
 	<section class="header">
 		<a href="index.html">
 			<img src="img/TelerikLogo.png" />
-			<span class="app-name">TELEZONE</span>
+			<span class="app-name">TELEZONER</span>
 		</a>
 	</section>
 
@@ -82,6 +82,9 @@
 		var dropPin;  //google.maps.LatLng
 		var infowindow;
 		
+		var currentLat;
+		var currentLong;
+		
 		//new stuff
 		var descrips;
 		
@@ -91,10 +94,18 @@
 			descrips = new Array();
 			infowindow = new google.maps.InfoWindow();
 			
+			var urlString = document.URL;
+			
+			currentLat = getParameterByName("lat");
+			currentLong = getParameterByName("long");
+			var startLatLng = new google.maps.LatLng(currentLat, currentLong, true);
+			
+			
+			
 			//init map options
 			var mapOptions = {
 				zoom: 14,
-				center: myLatlng,
+				center: startLatLng,
 				mapTypeId: google.maps.MapTypeId.ROADMAP,
 			}
 		
@@ -122,6 +133,14 @@
 			var window = $("#formWindow").data("kendoWindow").close();
 			//window.close();
 		}
+		function getParameterByName(name) {
+			name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+			var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+				results = regex.exec(location.search);
+			return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+		}
+				
+		
 		
 		function placeMarker() {
 			var window = $("#formWindow").data("kendoWindow");
@@ -176,7 +195,7 @@
 			$.ajax("/api/locations").done(function(locations){
 				for(var i = 0; i<locations.length; i++){
 					var location = locations[i];
-					if(mapZoom == map.getZoom()){
+					//if(mapZoom == map.getZoom()){
 						var pinTitle = $("#pinName").value;
 						var image = new google.maps.MarkerImage('/img/teleriklogosmall.png',
 							new google.maps.Size(50,50),
@@ -191,7 +210,7 @@
 							icon: image,
 							title: location.description
 						});
-					}
+					//}
 				}
 			});
 			
