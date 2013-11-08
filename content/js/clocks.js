@@ -31,17 +31,29 @@
 	var generateHolidaysData = function (holidays) {
 		var data = [];
 
+		var findHoliday = function (data, name) {
+			for(var i = 0; i < data.length; i++) {
+				if(data[i].description === name) {
+					return data[i];
+				}
+			}
+		};
+
 		$.each(holidays, function (index, holiday) {
 			var timeUntilHoliday = moment.duration(moment(holiday.date, "YYYY-MM-DD").diff(moment())).asDays();
-			if(timeUntilHoliday >= 0 || timeUntilHoliday <= 30) {
-				data.push({
-					office: holiday.office,
-					day: moment(holiday.date, "YYYY-MM-DD").format("MMM D"),
-					description: holiday.name
-				});
-
+			if(timeUntilHoliday >= 0 && timeUntilHoliday <= 30) {
+				var dataItem = findHoliday(data, holiday.name);
 				var office = officeData.get(holiday.office);
 				office.set("warning", true);
+				if(dataItem) {
+					dataItem.office = dataItem.office + ", " + office.name;
+				} else {
+					data.push({
+						office: office.name,
+						day: moment(holiday.date, "YYYY-MM-DD").format("MMM D"),
+						description: holiday.name
+					});
+				}
 			}
 		});
 
