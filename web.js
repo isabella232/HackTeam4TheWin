@@ -6,7 +6,7 @@ var Server = require('mongodb').Server;
 
 var mongoUri = process.env.MONGOLAB_URI ||
   process.env.MONGOHQ_URL ||
-  'mongodb://localhost/telezoner';
+  'mongodb://localhost/telezone';
 
 app.configure(function(){
   app.use(express.bodyParser());
