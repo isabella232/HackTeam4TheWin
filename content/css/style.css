@@ -117,6 +117,9 @@ a:hover {
 	color: #bed62f;
 	width: 400px;
 	height: 100px;
+	-mox-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 .clock .office-name {
