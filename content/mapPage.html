@@ -56,13 +56,7 @@
 	</section>
 
 	<div id="content">
-		<button id="bostonButton">Boston</button>
-		<button id="austinButton">Austin</button>
-		<button id="hudsonButton">Hudson</button>
-		<button id="bulgariaButton">Bulgaria</button>
-		<button id="copenhagenButton">Copenhagen</button>
-		<button id="sydneyButton">Sydney</button>
-		<button id="paloAltoButton">Palo Alto</button>
+	<br/><br/>
 	</div>
 	<div id="formWindow" style="width:100%;height:40%;margin-left:auto;margin-right:auto;">
 			<p>Enter a description:</p>
@@ -84,6 +78,7 @@
 		
 		var currentLat;
 		var currentLong;
+		var startLatLng;
 		
 		//new stuff
 		var descrips;
@@ -98,7 +93,8 @@
 			
 			currentLat = getParameterByName("lat");
 			currentLong = getParameterByName("long");
-			var startLatLng = new google.maps.LatLng(currentLat, currentLong, true);
+			
+			startLatLng = new google.maps.LatLng(currentLat, currentLong, true);
 			
 			
 			
@@ -108,12 +104,7 @@
 				center: startLatLng,
 				mapTypeId: google.maps.MapTypeId.ROADMAP,
 			}
-		
-			//create temp marker, with title "Hello World!"
-			marker = new google.maps.Marker({
-				position: myLatlng,
-				title:"Hello World!"
-			});
+			
 			
 			//create map with map div & map options
 			map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
@@ -126,8 +117,11 @@
 				dropPin = event.latLng;
 				setTimeout("placeMarker()", 500);
 			});
-			
 			loadLocations();
+			
+			
+			
+			
 			
 			
 			$("#formWindow").kendoWindow({
@@ -194,6 +188,20 @@
 		
 		function loadLocations() {
 			//alert("load !");
+			var largeImage = new google.maps.MarkerImage('/img/TelerikLogoGreenSmall.png',
+							new google.maps.Size(100,100),
+							new google.maps.Point(0,0),
+							new google.maps.Point(50,100)
+						);
+						marker = new google.maps.Marker({
+							position: startLatLng,
+							map: map,
+							icon: largeImage,
+							title: "Telerik Office"
+						});
+		
+		
+		
 		
 			$.ajax("/api/locations").done(function(locations){
 				for(var i = 0; i<locations.length; i++){
@@ -236,52 +244,9 @@
 
 		google.maps.event.addDomListener(window, 'load', initialize);
 
-		$(document).ready(function () {
-			$("#bulgariaButton").click(function(){
-					zoomBulgaria();
-			});
-			$("#bostonButton").click(function(){
-					zoomBoston();
-			});
-			$("#hudsonButton").click(function(){
-					zoomHudson();
-			});
-			$("#austinButton").click(function(){
-					zoomAustin();
-			});
-			$("#copenhagenButton").click(function(){
-					zoomCopenhagen();
-			});
-			$("#sydneyButton").click(function(){
-					zoomSydney();
-			});
-			$("#paloAltoButton").click(function(){
-					zoomPaloAlto();
-			});
-		});
 		
-		function zoomBoston(){
-			map.setCenter(new google.maps.LatLng(42.374805, -71.272988), 13);
-		}
-		function zoomAustin(){
-			map.setCenter(new google.maps.LatLng(30.268107, -97.744821), 13);
-		}
-		function zoomHudson(){
-			map.setCenter(new google.maps.LatLng(41.227979, -81.439556), 13);
-		}
-		function zoomBulgaria(){
-			map.setCenter(new google.maps.LatLng(42.697839, 23.32167), 13);
-		}
-		function zoomCopenhagen(){
-			map.setCenter(new google.maps.LatLng(55.670181, 12.53854), 13);
-		}
-		function zoomSydney(){
-			map.setCenter(new google.maps.LatLng(-33.919289, 151.251876), 13);
-		}
-		function zoomPaloAlto(){
-			map.setCenter(new google.maps.LatLng(37.444618, -122.163263), 13);
-		}
-
+		
+		
 		
     </script>
         <script src="http://cdn.kendostatic.com/2013.2.918/js/kendo.all.min.js"></script>
