@@ -4,6 +4,10 @@
 	box-sizing: border-box;
 }
 
+a img {
+	border: none;
+}
+
 .clearfix:after {
 	content: ".";
 	display: block;
@@ -69,6 +73,7 @@ a:hover {
 .app-name {
 	font-size: 2em;
 	font-weight: bold;
+	margin-left: .25em;
 }
 
 .header img {
@@ -79,6 +84,10 @@ a:hover {
 
 .header .selected-day {
 	float: right;
+}
+
+.clocks {
+	padding: 20px;
 }
 
 .clocks,
@@ -119,6 +128,12 @@ a:hover {
 	position: absolute;
 	left: 20px;
 	bottom: 20px;
+}
+
+.clock .office-analog-clock {
+	position: absolute;
+	right: 40px;
+	top:0;
 }
 
 .notifications {

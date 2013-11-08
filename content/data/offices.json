@@ -1,66 +1,77 @@
 [
     {
-      "name": "USA/Houston",
+      "id": "houston",
+      "name": "Houston",
       "timezone": "America/Monterrey",
       "lat": 29.9322245,
       "long": -95.295896
     },
     {
-      "name": "USA/Austin",
-      "timezone": "America/New_York",
+      "id": "austin",
+      "name": "Austin",
+      "timezone": "America/Monterrey",
       "lat": 30.268107,
       "long": -97.744821
     },
     {
-      "name": "USA/Palo_Alto",
+      "id": "paloalto",
+      "name": "Palo_Alto",
       "timezone": "America/Los_Angeles",
       "lat": 37.444618,
       "long": -122.163263
     },
     {
-      "name": "USA/Boston",
+      "id": "boston",
+      "name": "Boston",
       "timezone": "America/New_York",
       "lat": 42.374805,
       "long": -71.272988
     },
     {
-      "name": "USA/Hudson",
+      "id": "hudson",
+      "name": "Hudson",
       "timezone": "America/New_York",
       "lat": 41.227979,
       "long": -81.439556
     },
     {
-      "name": "Australia/Sydney",
+      "id": "sydney",
+      "name": "Sydney",
       "timezone": "Australia/Sydney",
       "lat": -33.919289,
       "long": 151.251876
     },
     {
-      "name": "Denmark/Copenhagen",
+      "id": "copenhagen",
+      "name": "Copenhagen",
       "timezone": "Europe/Copenhagen",
       "lat": 55.670181,
       "long": 12.53854
     },
     {
-      "name": "Germany/Munich",
+      "id": "munich",
+      "name": "Munich",
       "timezone": "Europe/Berlin",
       "lat": 48.117496,
       "long": 11.601371
     },
     {
-      "name": "UK/London",
+      "id": "london",
+      "name": "London",
       "timezone": "Europe/London",
       "lat": 51.519,
       "long": -0.130222
     },
     {
-      "name": "Bulgaria/Sofia",
+      "id": "sofia",
+      "name": "Sofia",
       "timezone": "Europe/Sofia",
       "lat": 42.697839,
       "long": 23.32167
     },
     {
-      "name": "India/Gurgaon",
+      "id": "gurgaron",
+      "name": "Gurgaon",
       "timezone": "",
       "lat": 28.490348,
       "long": 77.092689

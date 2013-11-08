@@ -20,7 +20,9 @@
 			</a>
 		</section>
 
-		<section class="clocks"><div class="clearfix" data-role="listview" data-bind="source: offices" data-template="clock-template"></div></section>
+		<section class="clocks">
+			<div class="clearfix" data-role="listview" data-bind="source: offices, events:{dataBound: clockListBound}" data-template="clock-template"></div>
+		</section>
 
 		<section class="notifications"></section>
 
@@ -33,6 +35,7 @@
 				</div>
 				<span class="office-name" data-bind="text: name"></span>
 				<span class="office-time" data-bind="text: calcTime"></span>
+				<div id="clock-${id}" class="office-analog-clock"></div>
 			</div>
 		</script>
 
