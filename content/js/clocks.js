@@ -60,8 +60,10 @@
         pin.attr("fill", "#000000");    
     	clockCanvasHands[elementid] = {
     		hour_hand: hour_hand,
-    		minute_hand: minute_hand
-    		//second_hand: second_hand
+    		minute_hand: minute_hand,
+    		//second_hand: second_hand,
+	        hour_angle: 0,
+	        minute_angle: 0
     	};
     };
     
@@ -71,15 +73,27 @@
         var minutes = now.minutes();
         var seconds = now.seconds();
         var hands = clockCanvasHands[elementid];
-        hands.hour_hand.rotate(30*hours+(minutes/2.5), clockRadius, clockRadius);
-        hands.minute_hand.rotate(6*minutes, clockRadius, clockRadius);
-        //hands.second_hand.rotate(6*seconds, clockRadius, clockRadius);
+        if(hands) {
+	        hands.hour_hand.rotate((30*hours+(minutes/2.5)) - hands.hour_angle, clockRadius, clockRadius);
+	        hands.minute_hand.rotate((6*minutes) - hands.minute_angle, clockRadius, clockRadius);
+	        //hands.second_hand.rotate(6*seconds, clockRadius, clockRadius);
+	        hands.hour_angle = 30*hours+(minutes/2.5);
+	        hands.minute_angle = 6*minutes;
+	    }
     };
 
     var initAnalogClocks = function () {
     	$.each(officeData.view(), function (index, item) {
     		setTimeout(function () {
 	    		draw_clock("clock-" + item.id);
+	    		update_clock("clock-" + item.id, item);
+    		}, 1);
+    	});
+    };
+
+    var updateAnalogClocks = function () {
+    	$.each(officeData.view(), function (index, item) {
+    		setTimeout(function () {
 	    		update_clock("clock-" + item.id, item);
     		}, 1);
     	});
@@ -106,5 +120,13 @@
 		}
 	});
 
+	viewModel.bind("change", function () {
+		updateAnalogClocks();
+	});
+
 	kendo.bind($("body"), viewModel);
+
+	setInterval(function () {
+		viewModel.set("selectedTime", moment().toDate());
+	}, 5000);
 })(window.jQuery, window.kendo, window.moment);
