@@ -120,6 +120,9 @@ a:hover {
 }
 
 .clock {
+	display: block;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 	position: relative;
 	float: left;
 	padding: 20px;
@@ -127,9 +130,6 @@ a:hover {
 	color: #bed62f;
 	width: 400px;
 	height: 100px;
-	-mox-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
 }
 
 .clock .office-name {
