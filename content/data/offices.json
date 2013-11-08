@@ -17,7 +17,7 @@
     },
     {
       "id": "paloalto",
-      "name": "Palo_Alto",
+      "name": "Palo Alto",
       "timezone": "America/Los_Angeles",
       "lat": 37.444618,
       "long": -122.163263,
