@@ -80,6 +80,86 @@
         "name": "New Years Day"
     },
     {
+        "office": "hudson",
+        "date": "2013-11-21",
+        "name": "Veteran's Day"
+    },
+     {
+        "office": "hudson",
+        "date": "2013-11-28",
+        "name": "Thanksgiving"
+    },
+     {
+        "office": "hudson",
+        "date": "2013-11-29",
+        "name": "Day After Thanksgiving"
+    },
+     {
+        "office": "hudson",
+        "date": "2013-12-24",
+        "name": "Christmas Eve"
+    },
+     {
+        "office": "hudson",
+        "date": "2013-12-25",
+        "name": "Christmas Day"
+    },
+    {
+        "office": "hudson",
+        "date": "2014-1-1",
+        "name": "New Years Day"
+    },
+    {
+        "office": "hudson",
+        "date": "2014-5-26",
+        "name": "Memorial Day"
+    },
+    {
+        "office": "hudson",
+        "date": "2014-7-4",
+        "name": "Independence Day"
+    },
+    {
+        "office": "hudson",
+        "date": "2014-9-1",
+        "name": "Labor Day"
+    },
+    {
+        "office": "hudson",
+        "date": "2014-10-13",
+        "name": "Columbus Day"
+    },
+    {
+        "office": "hudson",
+        "date": "2014-11-21",
+        "name": "Veteran's Day"
+    },
+     {
+        "office": "hudson",
+        "date": "2014-11-27",
+        "name": "Thanksgiving"
+    },
+     {
+        "office": "hudson",
+        "date": "2014-11-28",
+        "name": "Day After Thanksgiving"
+    },
+     {
+        "office": "hudson",
+        "date": "2014-12-24",
+        "name": "Christmas Eve"
+    },
+     {
+        "office": "hudson",
+        "date": "2014-12-25",
+        "name": "Christmas Day"
+    },
+    {
+        "office": "hudson",
+        "date": "2015-1-1",
+        "name": "New Years Day"
+    },    
+    {
         "office": "austin",
         "date": "2013-11-21",
         "name": "Veteran's Day"
