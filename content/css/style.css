@@ -100,14 +100,17 @@ a:hover {
 	background-color: #7d7d7d;
 }
 
-.about {
+#about {
 	background: url('../img/Map_BG.png') no-repeat center center fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
 	background-color: #7d7d7d;
-	padding: 10em;
+}
+
+.about {
+	padding: 10%;
 }
 
 .k-listview {
