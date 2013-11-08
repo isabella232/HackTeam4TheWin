@@ -6,27 +6,621 @@
     },
      {
         "office": "boston",
-        "date": "2013-12-26",
-        "name": "Christmas"
+        "date": "2013-11-28",
+        "name": "Thanksgiving"
+    },
+     {
+        "office": "boston",
+        "date": "2013-11-29",
+        "name": "Day After Thanksgiving"
+    },
+     {
+        "office": "boston",
+        "date": "2013-12-24",
+        "name": "Christmas Eve"
+    },
+     {
+        "office": "boston",
+        "date": "2013-12-25",
+        "name": "Christmas Day"
     },
     {
         "office": "boston",
         "date": "2014-1-1",
         "name": "New Years Day"
     },
-   {
+    {
+        "office": "boston",
+        "date": "2014-5-26",
+        "name": "Memorial Day"
+    },
+    {
+        "office": "boston",
+        "date": "2014-7-4",
+        "name": "Independence Day"
+    },
+    {
+        "office": "boston",
+        "date": "2014-9-1",
+        "name": "Labor Day"
+    },
+    {
+        "office": "boston",
+        "date": "2014-10-13",
+        "name": "Columbus Day"
+    },
+    {
+        "office": "boston",
+        "date": "2014-11-21",
+        "name": "Veteran's Day"
+    },
+     {
+        "office": "boston",
+        "date": "2014-11-27",
+        "name": "Thanksgiving"
+    },
+     {
+        "office": "boston",
+        "date": "2014-11-28",
+        "name": "Day After Thanksgiving"
+    },
+     {
+        "office": "boston",
+        "date": "2014-12-24",
+        "name": "Christmas Eve"
+    },
+     {
+        "office": "boston",
+        "date": "2014-12-25",
+        "name": "Christmas Day"
+    },
+    {
+        "office": "boston",
+        "date": "2015-1-1",
+        "name": "New Years Day"
+    },
+    {
         "office": "austin",
         "date": "2013-11-21",
         "name": "Veteran's Day"
     },
      {
         "office": "austin",
-        "date": "2013-12-26",
-        "name": "Christmas"
+        "date": "2013-11-28",
+        "name": "Thanksgiving"
+    },
+     {
+        "office": "austin",
+        "date": "2013-11-29",
+        "name": "Day After Thanksgiving"
+    },
+     {
+        "office": "austin",
+        "date": "2013-12-24",
+        "name": "Christmas Eve"
+    },
+     {
+        "office": "austin",
+        "date": "2013-12-25",
+        "name": "Christmas Day"
     },
     {
         "office": "austin",
         "date": "2014-1-1",
+        "name": "New Years Day"
+    },
+    {
+        "office": "austin",
+        "date": "2014-5-26",
+        "name": "Memorial Day"
+    },
+    {
+        "office": "austin",
+        "date": "2014-7-4",
+        "name": "Independence Day"
+    },
+    {
+        "office": "austin",
+        "date": "2014-9-1",
+        "name": "Labor Day"
+    },
+    {
+        "office": "austin",
+        "date": "2014-10-13",
+        "name": "Columbus Day"
+    },
+    {
+        "office": "austin",
+        "date": "2014-11-21",
+        "name": "Veteran's Day"
+    },
+     {
+        "office": "austin",
+        "date": "2014-11-27",
+        "name": "Thanksgiving"
+    },
+     {
+        "office": "austin",
+        "date": "2014-11-28",
+        "name": "Day After Thanksgiving"
+    },
+     {
+        "office": "austin",
+        "date": "2014-12-24",
+        "name": "Christmas Eve"
+    },
+     {
+        "office": "austin",
+        "date": "2014-12-25",
+        "name": "Christmas Day"
+    },
+    {
+        "office": "austin",
+        "date": "2015-1-1",
+        "name": "New Years Day"
+    },
+    {
+        "office": "houston",
+        "date": "2013-11-21",
+        "name": "Veteran's Day"
+    },
+     {
+        "office": "houston",
+        "date": "2013-11-28",
+        "name": "Thanksgiving"
+    },
+     {
+        "office": "houston",
+        "date": "2013-11-29",
+        "name": "Day After Thanksgiving"
+    },
+     {
+        "office": "houston",
+        "date": "2013-12-24",
+        "name": "Christmas Eve"
+    },
+     {
+        "office": "houston",
+        "date": "2013-12-25",
+        "name": "Christmas Day"
+    },
+    {
+        "office": "houston",
+        "date": "2014-1-1",
+        "name": "New Years Day"
+    },
+    {
+        "office": "houston",
+        "date": "2014-5-26",
+        "name": "Memorial Day"
+    },
+    {
+        "office": "houston",
+        "date": "2014-7-4",
+        "name": "Independence Day"
+    },
+    {
+        "office": "houston",
+        "date": "2014-9-1",
+        "name": "Labor Day"
+    },
+    {
+        "office": "houston",
+        "date": "2014-10-13",
+        "name": "Columbus Day"
+    },
+    {
+        "office": "houston",
+        "date": "2014-11-21",
+        "name": "Veteran's Day"
+    },
+     {
+        "office": "houston",
+        "date": "2014-11-27",
+        "name": "Thanksgiving"
+    },
+     {
+        "office": "houston",
+        "date": "2014-11-28",
+        "name": "Day After Thanksgiving"
+    },
+     {
+        "office": "houston",
+        "date": "2014-12-24",
+        "name": "Christmas Eve"
+    },
+     {
+        "office": "houston",
+        "date": "2014-12-25",
+        "name": "Christmas Day"
+    },
+    {
+        "office": "houston",
+        "date": "2015-1-1",
+        "name": "New Years Day"
+    },
+    {
+        "office": "paloalto",
+        "date": "2013-11-21",
+        "name": "Veteran's Day"
+    },
+     {
+        "office": "paloalto",
+        "date": "2013-11-28",
+        "name": "Thanksgiving"
+    },
+     {
+        "office": "paloalto",
+        "date": "2013-11-29",
+        "name": "Day After Thanksgiving"
+    },
+     {
+        "office": "paloalto",
+        "date": "2013-12-24",
+        "name": "Christmas Eve"
+    },
+     {
+        "office": "paloalto",
+        "date": "2013-12-25",
+        "name": "Christmas Day"
+    },
+    {
+        "office": "paloalto",
+        "date": "2014-1-1",
+        "name": "New Years Day"
+    },
+    {
+        "office": "paloalto",
+        "date": "2014-5-26",
+        "name": "Memorial Day"
+    },
+    {
+        "office": "paloalto",
+        "date": "2014-7-4",
+        "name": "Independence Day"
+    },
+    {
+        "office": "paloalto",
+        "date": "2014-9-1",
+        "name": "Labor Day"
+    },
+    {
+        "office": "paloalto",
+        "date": "2014-10-13",
+        "name": "Columbus Day"
+    },
+    {
+        "office": "paloalto",
+        "date": "2014-11-21",
+        "name": "Veteran's Day"
+    },
+     {
+        "office": "paloalto",
+        "date": "2014-11-27",
+        "name": "Thanksgiving"
+    },
+     {
+        "office": "paloalto",
+        "date": "2014-11-28",
+        "name": "Day After Thanksgiving"
+    },
+     {
+        "office": "paloalto",
+        "date": "2014-12-24",
+        "name": "Christmas Eve"
+    },
+     {
+        "office": "paloalto",
+        "date": "2014-12-25",
+        "name": "Christmas Day"
+    },
+    {
+        "office": "paloalto",
+        "date": "2015-1-1",
+        "name": "New Years Day"
+    },
+     {
+        "office": "munich",
+        "date": "2013-12-25",
+        "name": "Christmas Day"
+    },
+     {
+        "office": "munich",
+        "date": "2013-12-26",
+        "name": "Saint Stephen's Day"
+    },
+    {
+        "office": "munich",
+        "date": "2014-1-1",
+        "name": "New Years Day"
+    },
+    {
+        "office": "munich",
+        "date": "2014-5-1",
+        "name": "May Day"
+    },
+    {
+        "office": "munich",
+        "date": "2014-5-29",
+        "name": "Ascension"
+    },
+    {
+        "office": "munich",
+        "date": "2014-6-9",
+        "name": "Whit Monday"
+    },
+    {
+        "office": "munich",
+        "date": "2014-10-3",
+        "name": "National Day"
+    },
+     {
+        "office": "munich",
+        "date": "2014-12-25",
+        "name": "Christmas Day"
+    },
+     {
+        "office": "munich",
+        "date": "2014-12-26",
+        "name": "Saint Stephen's Day"
+    },
+    {
+        "office": "munich",
+        "date": "2015-1-1",
+        "name": "New Years Day"
+    },
+     {
+        "office": "london",
+        "date": "2013-12-25",
+        "name": "Christmas"
+    },
+     {
+        "office": "london",
+        "date": "2013-12-26",
+        "name": "Boxing Day"
+    },
+    {
+        "office": "london",
+        "date": "2014-1-1",
+        "name": "New Years Day"
+    },
+    {
+        "office": "london",
+        "date": "2014-3-29",
+        "name": "Good Friday"
+    },
+    {
+        "office": "london",
+        "date": "2014-5-1",
+        "name": "May Day"
+    },
+    {
+        "office": "london",
+        "date": "2014-5-27",
+        "name": "Spring Bank Holiday"
+    },
+    {
+        "office": "london",
+        "date": "2014-8-26",
+        "name": "Summer Bank Holiday"
+    },
+     {
+        "office": "london",
+        "date": "2014-12-25",
+        "name": "Christmas"
+    },
+     {
+        "office": "london",
+        "date": "2014-12-26",
+        "name": "Boxing Day"
+    },
+    {
+        "office": "london",
+        "date": "2015-1-1",
+        "name": "New Years Day"
+    },
+     {
+        "office": "copenhagen",
+        "date": "2013-12-24",
+        "name": "Christmas Eve"
+    },
+     {
+        "office": "copenhagen",
+        "date": "2013-12-25",
+        "name": "Christmas Day"
+    },
+    {
+        "office": "copenhagen",
+        "date": "2014-1-1",
+        "name": "New Years Day"
+    },
+    {
+        "office": "copenhagen",
+        "date": "2014-3-28",
+        "name": "Maundy Thursday"
+    },
+    {
+        "office": "copenhagen",
+        "date": "2014-4-26",
+        "name": "PrayerDay"
+    },
+    {
+        "office": "copenhagen",
+        "date": "2014-5-1",
+        "name": "May Day"
+    },
+    {
+        "office": "copenhagen",
+        "date": "2014-5-19",
+        "name": "Ascension Day"
+    },
+    {
+        "office": "copenhagen",
+        "date": "2014-5-20",
+        "name": "Whit Sunday"
+    },
+    {
+        "office": "copenhagen",
+        "date": "2014-5-20",
+        "name": "Whit Monday"
+    },
+     {
+        "office": "copenhagen",
+        "date": "2014-12-24",
+        "name": "Christmas Eve"
+    },
+     {
+        "office": "copenhagen",
+        "date": "2014-12-25",
+        "name": "Christmas Day"
+    },
+    {
+        "office": "copenhagen",
+        "date": "2015-1-1",
+        "name": "New Years Day"
+    },
+     {
+        "office": "sydney",
+        "date": "2013-12-25",
+        "name": "Christmas Day"
+    },
+     {
+        "office": "sydney",
+        "date": "2013-12-26",
+        "name": "Boxing Day"
+    },
+    {
+        "office": "sydney",
+        "date": "2014-1-1",
+        "name": "New Years Day"
+    },
+    {
+        "office": "sydney",
+        "date": "2014-1-27",
+        "name": "Australia Day"
+    },
+    {
+        "office": "sydney",
+        "date": "2014-3-10",
+        "name": "Canberra"
+    },
+    {
+        "office": "sydney",
+        "date": "2014-4-25",
+        "name": "Anzac Day"
+    },
+    {
+        "office": "sydney",
+        "date": "2014-6-29",
+        "name": "Queen's Birthday"
+    },
+    {
+        "office": "sydney",
+        "date": "2014-9-29",
+        "name": "Faith and Community Day"
+    },
+    {
+        "office": "sydney",
+        "date": "2014-10-6",
+        "name": "Labour Day"
+    },
+     {
+        "office": "sydney",
+        "date": "2014-12-25",
+        "name": "Christmas Day"
+    },
+     {
+        "office": "sydney",
+        "date": "2014-12-26",
+        "name": "Boxing Day"
+    },
+    {
+        "office": "sydney",
+        "date": "2015-1-1",
+        "name": "New Years Day"
+    },
+     {
+        "office": "sofia",
+        "date": "2013-12-24",
+        "name": "Christmas Eve"
+    },
+     {
+        "office": "sofia",
+        "date": "2013-12-25",
+        "name": "Christmas Day"
+    },
+    {
+        "office": "sofia",
+        "date": "2014-1-1",
+        "name": "New Years Day"
+    },
+    {
+        "office": "sofia",
+        "date": "2014-3-3",
+        "name": "Liberation Day"
+    },
+    {
+        "office": "sofia",
+        "date": "2014-5-1",
+        "name": "Labor Day"
+    },
+    {
+        "office": "sofia",
+        "date": "2014-5-6",
+        "name": "St. George's Day"
+    },
+    {
+        "office": "sofia",
+        "date": "2014-5-24",
+        "name": "Saints Cyril and Methodius Day"
+    },
+    {
+        "office": "sofia",
+        "date": "2014-9-6",
+        "name": "Unification Day"
+    },
+    {
+        "office": "sofia",
+        "date": "2014-9-22",
+        "name": "Independence Day"
+    },
+     {
+        "office": "sofia",
+        "date": "2014-12-24",
+        "name": "Christmas Eve"
+    },
+     {
+        "office": "sofia",
+        "date": "2014-12-25",
+        "name": "Christmas Day"
+    },
+    {
+        "office": "sofia",
+        "date": "2015-1-1",
+        "name": "New Years Day"
+    },
+    {
+        "office": "gurgaron",
+        "date": "2014-1-1",
+        "name": "New Years Day"
+    },
+    {
+        "office": "gurgaron",
+        "date": "2014-1-26",
+        "name": "Republic Day"
+    },
+    {
+        "office": "gurgaron",
+        "date": "2014-8-15",
+        "name": "Independence Day"
+    },    {
+        "office": "gurgaron",
+        "date": "2014-9-2",
+        "name": "Gandhi's Birthday Day"
+    },
+    {
+        "office": "gurgaron",
+        "date": "2015-1-1",
         "name": "New Years Day"
     }
 ]
