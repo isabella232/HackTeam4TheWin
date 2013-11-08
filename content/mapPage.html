@@ -131,9 +131,18 @@
 		}
 		
 		$("#addPinButton").click(function(){
+			$.post("/api/locations",{
+				lat:dropPin.lat(),
+				lng:dropPin.lng(),
+				description: document.getElementById("pinName").value		
+			});
+			loadLocations();
+			
+			
+		/*
 			if(mapZoom == map.getZoom()){
 			var pinTitle = $("#pinName").value;
-					var image = new google.maps.MarkerImage('teleriklogo.png',
+					var image = new google.maps.MarkerImage('/img/teleriklogosmall.png',
 						new google.maps.Size(50,50),
 						new google.maps.Point(0,0),
 						new google.maps.Point(16,25)
@@ -148,18 +157,46 @@
 				
 				
 				google.maps.event.addListener(marker, 'click', function(event) {
-					marker.setMap(null);
+					marker.setMap(null);*/
 					/*infowindow.setContent(pinTitle); //this variabe changes, so this doesnt work
 					infowindow.open(map,marker);*/
-				});
+				//});
 				//createMarker(dropPin, pinTitle);
 				
-			}	
+				
 			
 			var window = $("#formWindow").data("kendoWindow");
 			window.close();
 			
 			});
+		
+		function loadLocations() {
+			//alert("load !");
+		
+			$.ajax("/api/locations").done(function(locations){
+				for(var i = 0; i<locations.length; i++){
+					var location = locations[i];
+					if(mapZoom == map.getZoom()){
+						var pinTitle = $("#pinName").value;
+						var image = new google.maps.MarkerImage('/img/teleriklogosmall.png',
+							new google.maps.Size(50,50),
+							new google.maps.Point(0,0),
+							new google.maps.Point(16,25)
+						);
+						var newLatLng = new google.maps.LatLng(location.lat, location.lng, true);
+			
+						marker = new google.maps.Marker({
+							position: newLatLng,
+							map: map,
+							icon: image,
+							title: location.description
+						});
+					}
+				}
+			});
+			
+		}
+		
 		
 		
 		//this was my attempt at creating markers with a text label. it does not work.
