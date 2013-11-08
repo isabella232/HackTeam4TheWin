@@ -10,12 +10,9 @@
 		},
 		change: function () {
 			generateNotificationData();
-		}
-	});
-
-	var holidayData = new kendo.data.DataSource({
-		transport: {
-			read: "data/holidays.json"
+			$.ajax("data/holidays.json").done(function (data) {
+				generateHolidaysData(data);
+			});
 		}
 	});
 
@@ -26,6 +23,30 @@
 	var notificationsData = new kendo.data.DataSource({
 		data: []
 	});
+
+	var holidaysData = new kendo.data.DataSource({
+		data: []
+	});
+
+	var generateHolidaysData = function (holidays) {
+		var data = [];
+
+		$.each(holidays, function (index, holiday) {
+			var timeUntilHoliday = moment.duration(moment(holiday.date, "YYYY-MM-DD").diff(moment())).asDays();
+			if(timeUntilHoliday >= 0 || timeUntilHoliday <= 30) {
+				data.push({
+					office: holiday.office,
+					day: moment(holiday.date, "YYYY-MM-DD").format("MMM D"),
+					description: holiday.name
+				});
+
+				var office = officeData.get(holiday.office);
+				office.set("warning", true);
+			}
+		});
+
+		holidaysData.data(data);
+	};
 
 	var generateNotificationData = function () {
 		var data = [];
@@ -139,7 +160,8 @@
 			initAnalogClocks();
 		},
 
-		notifications: notificationsData
+		notifications: notificationsData,
+		holidays: holidaysData
 	});
 
 	viewModel.bind("change", function () {
