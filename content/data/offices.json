@@ -82,7 +82,7 @@
     {
       "id": "gurgaron",
       "name": "Gurgaon",
-      "timezone": "",
+      "timezone": "India/Gurgaon",
       "lat": 28.490348,
       "long": 77.092689,
       "warning": false

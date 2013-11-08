@@ -58,6 +58,9 @@ moment.tz.add({
             "1 SovietZone CE%sT 1946 1",
             "1 Germany CE%sT 1980 1",
             "1 EU CE%sT"
+        ],
+        "India/Gurgaon": [
+            "5:30 - IST"
         ]
     },
     "rules": {
