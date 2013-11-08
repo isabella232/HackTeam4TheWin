@@ -4,76 +4,87 @@
       "name": "Houston",
       "timezone": "America/Monterrey",
       "lat": 29.9322245,
-      "long": -95.295896
+      "long": -95.295896,
+      "warning": false
     },
     {
       "id": "austin",
       "name": "Austin",
       "timezone": "America/Monterrey",
       "lat": 30.268107,
-      "long": -97.744821
+      "long": -97.744821,
+      "warning": false
     },
     {
       "id": "paloalto",
       "name": "Palo_Alto",
       "timezone": "America/Los_Angeles",
       "lat": 37.444618,
-      "long": -122.163263
+      "long": -122.163263,
+      "warning": false
     },
     {
       "id": "boston",
       "name": "Boston",
       "timezone": "America/New_York",
       "lat": 42.374805,
-      "long": -71.272988
+      "long": -71.272988,
+      "warning": false
     },
     {
       "id": "hudson",
       "name": "Hudson",
       "timezone": "America/New_York",
       "lat": 41.227979,
-      "long": -81.439556
+      "long": -81.439556,
+      "warning": false
     },
     {
       "id": "sydney",
       "name": "Sydney",
       "timezone": "Australia/Sydney",
       "lat": -33.919289,
-      "long": 151.251876
+      "long": 151.251876,
+      "warning": false
     },
     {
       "id": "copenhagen",
       "name": "Copenhagen",
       "timezone": "Europe/Copenhagen",
       "lat": 55.670181,
-      "long": 12.53854
+      "long": 12.53854,
+      "warning": false
     },
     {
       "id": "munich",
       "name": "Munich",
       "timezone": "Europe/Berlin",
       "lat": 48.117496,
-      "long": 11.601371
+      "long": 11.601371,
+      "warning": false
     },
     {
       "id": "london",
       "name": "London",
       "timezone": "Europe/London",
       "lat": 51.519,
-      "long": -0.130222
+      "long": -0.130222,
+      "warning": false
     },
     {
       "id": "sofia",
       "name": "Sofia",
       "timezone": "Europe/Sofia",
       "lat": 42.697839,
-      "long": 23.32167
+      "long": 23.32167,
+      "warning": false
     },
     {
       "id": "gurgaron",
       "name": "Gurgaon",
       "timezone": "",
       "lat": 28.490348,
-      "long": 77.092689
+      "long": 77.092689,
+      "warning": false
     }
 ]

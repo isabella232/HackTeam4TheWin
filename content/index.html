@@ -24,18 +24,26 @@
 			<div class="clearfix" data-role="listview" data-bind="source: offices, events:{dataBound: clockListBound}" data-template="clock-template"></div>
 		</section>
 
-		<section class="notifications"></section>
+		<section class="notifications">
+			<div data-role="listview" data-bind="source: notifications" data-template="notification-template"></div>
+		</section>
 
 		<!-- kendo templates -->
 		<script id="clock-template" type="text/x-kendo-template">
 			<div class="clock">
 				<div class="office-icons">
 					<a href="mapPage.html"><i class="fa fa-map-marker"></i></a>
-					<span class="warning">!</span>
+					<span class="warning" data-bind="visible: warning">!</span>
 				</div>
 				<span class="office-name" data-bind="text: name"></span>
 				<span class="office-time" data-bind="text: calcTime"></span>
 				<div id="clock-${id}" class="office-analog-clock"></div>
+			</div>
+		</script>
+
+		<script id="notification-template" type="text/x-kendo-template">
+			<div class="notification">
+				<span class="warning">!</span><span data-bind="text: day"></span>: <span data-bind="text: office"></span> - <span data-bind="text: description"></span>
 			</div>
 		</script>
 

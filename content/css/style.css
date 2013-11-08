@@ -100,7 +100,7 @@ a:hover {
 	background-color: #7d7d7d;
 }
 
-.clocks .k-listview {
+.k-listview {
 	border: none;
 	background-color: transparent;
 }
@@ -137,6 +137,10 @@ a:hover {
 }
 
 .notifications {
-	height: 50px;
+	min-height: 1.5em;
 	background-color: #bed62f;
+}
+
+.notification {
+	text-align: center;
 }

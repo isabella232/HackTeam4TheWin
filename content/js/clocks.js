@@ -7,6 +7,15 @@
 	var officeData = new kendo.data.DataSource({
 		transport: {
 			read: "data/offices.json"
+		},
+		change: function () {
+			generateNotificationData();
+		}
+	});
+
+	var holidayData = new kendo.data.DataSource({
+		transport: {
+			read: "data/holidays.json"
 		}
 	});
 
@@ -14,29 +23,40 @@
 		data: []
 	});
 
-	var generateTimelineData = function () {
+	var notificationsData = new kendo.data.DataSource({
+		data: []
+	});
+
+	var generateNotificationData = function () {
 		var data = [];
 		var offices = officeData.view();
 		var numOffices = offices.length;
 		var office;
 		var momentForDay;
+		var offset;
 
 		for(var i = 0; i < numOffices; i++) {
 			office = offices[i];
-			momentForDay = moment(this.get("selectedTime")).tz(timezone).add("days", -8);
+			if(!office.timezone) { continue; }
+			momentForDay = moment(viewModel.get("selectedTime")).tz(office.timezone);
+			offset = momentForDay.zone();
 
-			for(var dayIdx = -7; dayIdx <= 30; dayIdx++) {
+			for(var dayIdx = 0; dayIdx <= 30; dayIdx++) {
 				momentForDay.add("days", 1);
-				data.push({
-					name: office.name,
-					day: dayIdx,
-					offset: momentForDay.zone() / 60
-				});
+				if(offset != momentForDay.zone()) {
+					data.push({
+						office: office.name,
+						day: momentForDay.format("MMM D"),
+						description: "Daylight Savings Change"
+					});
+					office.set("warning", true);
+				}
 			}
 		}
 
-		timelineData.data(data);
+		notificationsData.data(data);
 	};
+
 
     var draw_clock = function (elementid){
         var canvas = Raphael(elementid,clockRadius*2, clockRadius*2);
@@ -117,7 +137,9 @@
 
 		clockListBound: function () {
 			initAnalogClocks();
-		}
+		},
+
+		notifications: notificationsData
 	});
 
 	viewModel.bind("change", function () {
