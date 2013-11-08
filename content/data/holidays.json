@@ -1,0 +1,32 @@
+[
+    {
+        "office": "boston",
+        "date": "2013-11-21",
+        "name": "Veteran's Day"
+    },
+     {
+        "office": "boston",
+        "date": "2013-12-26",
+        "name": "Christmas"
+    },
+    {
+        "office": "boston",
+        "date": "2014-1-1",
+        "name": "New Years Day"
+    },
+   {
+        "office": "austin",
+        "date": "2013-11-21",
+        "name": "Veteran's Day"
+    },
+     {
+        "office": "austin",
+        "date": "2013-12-26",
+        "name": "Christmas"
+    },
+    {
+        "office": "austin",
+        "date": "2014-1-1",
+        "name": "New Years Day"
+    }
+]
