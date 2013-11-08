@@ -12,7 +12,7 @@
       "name": "Austin",
       "timezone": "America/Monterrey",
       "lat": 30.268107,
-      "long": -97.744821,
+      "long": -97.744728,
       "warning": false
     },
     {
@@ -75,8 +75,8 @@
       "id": "sofia",
       "name": "Sofia",
       "timezone": "Europe/Sofia",
-      "lat": 42.697839,
-      "long": 23.32167,
+      "lat": 42.650848,
+      "long": 23.379416,
       "warning": false
     },
     {
