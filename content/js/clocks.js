@@ -74,20 +74,30 @@
 			momentForDay = moment(viewModel.get("selectedTime")).tz(office.timezone);
 			offset = momentForDay.zone();
 
-			for(var dayIdx = 0; dayIdx <= 30; dayIdx++) {
-				momentForDay.add("days", 1);
-				if(offset != momentForDay.zone()) {
-					data.push({
-						office: office.name,
-						day: momentForDay.format("MMM D"),
-						description: "Daylight Savings Change"
-					});
-					office.set("warning", true);
+			if(timeChangesInNextMonth(office.timezone)) {
+				for(var dayIdx = 0; dayIdx <= 30; dayIdx++) {
+					momentForDay.add("days", 1);
+					if(offset != momentForDay.zone()) {
+						data.push({
+							office: office.name,
+							day: momentForDay.format("MMM D"),
+							description: "Daylight Savings Change"
+						});
+						office.set("warning", true);
+						break;
+					}
 				}
 			}
 		}
 
 		notificationsData.data(data);
+	};
+
+	var timeChangesInNextMonth = function (timezone) {
+		var momentForDay = moment(viewModel.get("selectedTime")).tz(timezone);
+		var offset = momentForDay.zone();
+		momentForDay.add("days", 30);
+		return offset != momentForDay.zone();
 	};
 
 
